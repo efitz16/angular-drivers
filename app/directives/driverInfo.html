@@ -1,17 +1,10 @@
-<div>
-  <!-- <span class="secondary-content">{{ index + 1}}</span> -->
-  {{ info.Driver.givenName }} {{ info.Driver.familyName }}
-</div>
-<div>
-  Points: 
-  <span>{{ info.points }}</span>
-</div>
-<div>
-  Nationality: {{ info.nationality }}
-</div>
-<div>
-  {{ info.Constructors[0].name }}
-</div>
-<div>
-  
-</div>
+<div class="container" ng-controller="driversController">
+      <ul class="collection with-header">
+        <li class="collection-header"><h6>Drivers standings</h6></li>
+        <li class="collection-item" ng-repeat="driver in driversList">
+        <a href="/#!/view1/drivers/{{$index}}" id="driver-route">{{ driver.Driver.givenName }} {{ driver.Driver.familyName }}</a>
+          
+          </li>
+        </ul>
+
+    </div>

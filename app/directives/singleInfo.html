@@ -1,0 +1,17 @@
+<div>
+            <!-- <span class="secondary-content">{{ index + 1}}</span> -->
+  {{ detail.Driver.givenName }} {{ detail.Driver.familyName }}
+</div>
+<div>
+  Points: 
+  <span>{{ detail.points }}</span>
+</div>
+<div>
+  Nationality: {{ detail.nationality }}
+</div>
+<div>
+  {{ detail.Constructors[0].name }}
+</div>
+<div>
+  <a class="btn-floating waves-effect waves-light" ng-click="increasePoints($index)"><i class="material-icons">add</i></a>
+</div>

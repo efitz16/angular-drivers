@@ -10,5 +10,14 @@ var app = angular.module('myApp', [
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
 
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider
+  .when('/view1', {
+  	controller: 'driversController',
+  	templateUrl: 'directives/driverInfo.html'
+  })
+  .when('/view1/drivers/:id', {
+  	controller: 'singleDriverController',
+  	templateUrl: 'directives/singleInfo.html'
+  })
+  .otherwise({redirectTo: '/view1'});
 }]);
