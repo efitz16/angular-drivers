@@ -1,18 +1,30 @@
-<div>
-            <!-- <span class="secondary-content">{{ index + 1}}</span> -->
-  {{ detail.Driver.givenName }} {{ detail.Driver.familyName }}
+<div class="container">
+<div class="row">
+<div class="section col s6">
+  <div>
+              <!-- <span class="secondary-content">{{ index + 1}}</span> -->
+    {{ detail.Driver.givenName }} {{ detail.Driver.familyName }}
+  </div>
+  <div>
+    Points: 
+    <span>{{ detail.points }}</span>
+  </div>
+  <div>
+    Nationality: {{ detail.Driver.nationality }}
+  </div>
+  <div>
+    {{ detail.Constructors[0].name }}
+  </div>
 </div>
-<div>
-  Points: 
-  <span>{{ detail.points }}</span>
+
+  <div class="col s2 pull-s3">
+    <a class="btn-floating waves-effect waves-light" ng-click="increasePoints()"><i class="material-icons">add</i></a>
+  </div>
 </div>
-<div>
-  Nationality: {{ detail.nationality }}
+<div class="row">
+<div class="section">
+
+    <a href="/#!/view1" class="btn">Back</a>
 </div>
-<div>
-  {{ detail.Constructors[0].name }}
 </div>
-<div>
-  <a class="btn-floating waves-effect waves-light" ng-click="increasePoints()"><i class="material-icons">add</i></a>
 </div>
-<a href="/#!/view1" class="btn">Back</a>
